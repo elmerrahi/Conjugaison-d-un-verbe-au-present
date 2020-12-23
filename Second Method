@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define verb.cc
+int main()
+{
+char verbe [26] ;
+char * addi ;
+char * fin[6] = {"e", "es", "e", "ons", "ez", "ent" } ;
+char * pro[6] = {"je", "tu", "il", "nous", "vous", "ils"} ;
+
+int i ;
+
+
+//------
+do
+{ printf ("donnez verbe : ") ;
+gets (verbe) ;
+addi = verbe + strlen(verbe) - 2 ;
+}while (strcmp (addi, "er")) ;
+
+//-------
+
+for (i=0 ; i<6 ; i++)
+{ strcpy (addi, fin[i]) ;
+printf ("%s %s\n", pro[i], verbe) ;
+}
+
+return 0;
+}
